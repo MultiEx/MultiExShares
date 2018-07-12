@@ -1,4 +1,6 @@
-## MultiexShares
+## MultiExShares
+
+MultiExShares is the internal currency of MultiEx Network. It can be exchanged or bought at (MultiEx)[https://multiex.io] and used on several plattforms while the network evolves.
 
 ### How To Compile
 
