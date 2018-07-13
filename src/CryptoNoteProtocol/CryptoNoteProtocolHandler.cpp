@@ -585,30 +585,30 @@ bool CryptoNoteProtocolHandler::on_connection_synchronized() {
   if (m_synchronized.compare_exchange_strong(val_expected, true)) {
     logger(Logging::INFO)
       << ENDL ;
-      logger(INFO, BRIGHT_MAGENTA) << "===[ TurtleCoin Tip! ]=============================" << ENDL ;
-      logger(INFO, WHITE) << " Always exit TurtleCoind and zedwallet with the \"exit\" command to preserve your chain and wallet data." << ENDL ;
+      logger(INFO, BRIGHT_MAGENTA) << "===[ MultiExShares Tip! ]=============================" << ENDL ;
+      logger(INFO, WHITE) << " Always exit muexd and muexdwallet with the \"exit\" command to preserve your chain and wallet data." << ENDL ;
       logger(INFO, WHITE) << " Use the \"help\" command to see a list of available commands." << ENDL ;
-      logger(INFO, WHITE) << " Use the \"export_keys\" command in zedwallet to display your keys for restoring a corrupted wallet." << ENDL ;
-      logger(INFO, WHITE) << " If you need more assistance, visit the #HELP channel in the TurtleCoin Discord Chat - https://chat.turtlecoin.lol" << ENDL ;
-      logger(INFO, BRIGHT_MAGENTA) << "===================================================" << ENDL << ENDL ;
+      logger(INFO, WHITE) << " Use the \"export_keys\" command in muexwallet to display your keys for restoring a corrupted wallet." << ENDL ;
+      logger(INFO, WHITE) << " If you need more assistance, visit the #HELP channel in the MultiExShares Telegram Chat - https://t.me/multiex_community" << ENDL ;
+      logger(INFO, BRIGHT_MAGENTA) << "==================================================="  << ENDL << ENDL ;
 
       logger(INFO, BRIGHT_GREEN) <<
 
       #ifdef _WIN32
-      "\n _______         _   _       _____      _        \n"
-              "|__   __|       | | | |     / ____|    (_)      \n"
-              "   | |_   _ _ __| |_| | ___| |     ___  _ _ __  \n"
-              "   | | | | | '__| __| |/ _ \\ |    / _ \\| | '_ \\ \n"
-              "   | | |_| | |  | |_| |  __/ |___| (_) | | | | |\n"
-      "   |_|\\__ _|_|   \\__|_|\\___|\\_____\\___/|_|_| |_|\n" << ENDL;
+       "\n                                                                   \n"
+ "    __  __       _ _   _ _____       ____  _                         \n" 
+ "   |  \/  |_   _| | |_(_) ____|_  __/ ___|| |__   __ _ _ __ ___  ___ \n"
+ "   | |\/| | | | | | __| |  _| \ \/ /\___ \| '_ \ / _` | '__/ _ \/ __|\n" 
+ "   | |  | | |_| | | |_| | |___ >  <  ___) | | | | (_| | | |  __/\__ \\n"
+ "   |_|  |_|\__,_|_|\__|_|_____/_/\_\|____/|_| |_|\__,_|_|  \___||___/\n" << ENDL;
       #else
-      "\n                                                                            \n"
-        "████████╗██╗  ██╗██████╗ ████████╗██╗    ██████╗ █████╗ █████╗ ██╗███╗   ██╗\n"
-        "╚══██╔══╝██║  ██║██╔══██╗╚══██╔══╝██║    ██╔═══╝██╔═══╝██╔══██╗██║████╗  ██║\n"
-        "   ██║   ██║  ██║██████╔╝   ██║   ██║    ████╗  ██║    ██║  ██║██║██╔██╗ ██║\n"
-        "   ██║   ██║  ██║██╔══██╗   ██║   ██║    ██╔═╝  ██║    ██║  ██║██║██║╚██╗██║\n"
-        "   ██║   ╚█████╔╝██║  ██║   ██║   ██████╗██████╗╚█████╗╚█████╔╝██║██║ ╚████║\n"
-        "   ╚═╝    ╚════╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝╚═════╝ ╚════╝ ╚════╝ ╚═╝╚═╝  ╚═══╝\n" << ENDL;
+ "\n                                                                                                     \n"
+  " ███╗   ███╗██╗   ██╗██╗  ████████╗██╗███████╗██╗  ██╗███████╗██╗  ██╗ █████╗ ██████╗ ███████╗███████╗\n"
+  " ████╗ ████║██║   ██║██║  ╚══██╔══╝██║██╔════╝╚██╗██╔╝██╔════╝██║  ██║██╔══██╗██╔══██╗██╔════╝██╔════╝\n"
+  " ██╔████╔██║██║   ██║██║     ██║   ██║█████╗   ╚███╔╝ ███████╗███████║███████║██████╔╝█████╗  ███████╗\n"
+  " ██║╚██╔╝██║██║   ██║██║     ██║   ██║██╔══╝   ██╔██╗ ╚════██║██╔══██║██╔══██║██╔══██╗██╔══╝  ╚════██║\n"
+  " ██║ ╚═╝ ██║╚██████╔╝███████╗██║   ██║███████╗██╔╝ ██╗███████║██║  ██║██║  ██║██║  ██║███████╗███████║\n"
+  " ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝\n"  << ENDL;
       #endif
 
     m_observerManager.notify(&ICryptoNoteProtocolObserver::blockchainSynchronized, m_core.getTopBlockIndex());
