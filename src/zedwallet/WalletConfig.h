@@ -23,10 +23,10 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "MultiExSharesd";
+    const std::string daemonName = "muexd";
 
     /* The name to call this wallet */
-    const std::string walletName = "zedwallet";
+    const std::string walletName = "muexwallet";
 
     /* The name of walletd, the programmatic rpc interface to a wallet */
     const std::string walletdName = "walletd";
