@@ -28,7 +28,7 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TA
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(1000000000000000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(10000000000000000000);
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
 const size_t ZAWY_DIFFICULTY_V2                              = 0;
 const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION       = 3;
@@ -41,7 +41,7 @@ const unsigned EMISSION_SPEED_FACTOR                         = 18;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(2500000000000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(25000000000000000);
 
 /* How to generate a premine:
 
@@ -202,7 +202,7 @@ const static boost::uuids::uuid CRYPTONOTE_NETWORK =
 };
 
 const char* const SEED_NODES[] = {
-  "64.52.85.190:17770", //s1.muex
-  "64.52.22.150:17770", //s2.muex
+  "64.52.85.127:17770", //s1.muex
+  "64.52.86.70:17770", //s2.muex
 };
 } // CryptoNote
